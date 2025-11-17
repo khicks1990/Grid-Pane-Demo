@@ -1,4 +1,4 @@
-# Chapter3Examples
+# Chapter12Example
 
 To launch your JavaFX app in this dev container, run the following command in the terminal:
 
