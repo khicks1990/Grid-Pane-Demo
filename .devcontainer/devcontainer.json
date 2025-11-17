@@ -1,0 +1,31 @@
+
+{
+    "name": "Java",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/desktop-lite:1": {
+            "password": "vscode",
+            "webPort": "6080",
+            "vncPort": "5901"
+        }
+    },
+"customizations": {
+      "vscode": {
+          "extensions": [
+              "vscjava.vscode-java-pack",
+              "ms-azuretools.vscode-docker"
+          ]
+      }
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+      "6080": {
+          "label": "GUI Output"
+      }
+  },
+    "postCreateCommand": "mvn clean compile"
+    ,
+    "postStartCommand": "mvn javafx:run"
+}
